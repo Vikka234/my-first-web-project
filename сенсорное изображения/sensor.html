@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Сенсорное изображение</title>
+</head>
+<body bgcolor="#ffffff">
+
+    <h2>🗺️ Сенсорное изображение</h2>
+    <p>Наведите на разные части картинки — увидите подсказку. Нажмите — появится сообщение.</p>
+
+    <map name="karta">
+
+        <area shape="rect"
+              coords="0,0, 150,150"
+              href="#"
+              onclick="alert('Верхняя левая область!'); return false;"
+              title="⬆️ Левая верхняя область">
+
+        <area shape="rect"
+              coords="150,0, 300,150"
+              href="#"
+              onclick="alert('Верхняя правая область!'); return false;"
+              title="⬆️ Правая верхняя область">
+
+        <area shape="circle"
+              coords="150,225, 60"
+              href="#"
+              onclick="alert('Центральная круглая область!'); return false;"
+              title=" Центр картинки">
+
+        <area shape="rect"
+              coords="0,300, 300,400"
+              href="#"
+              onclick="alert('Нижняя область!'); return false;"
+              title="⬇️ Нижняя часть">
+
+    </map>
+
+    <img src="kartinka.png"
+         width="300"
+         height="400"
+         border="2"
+         usemap="#karta"
+         alt="Моё сенсорное изображение">
+
+    <hr>
+    <p><b>Активные области:</b></p>
+    <ul>
+        <li> Верхний левый угол — прямоугольник</li>
+        <li> Верхний правый угол — прямоугольник</li>
+        <li> Центр — круг</li>
+        <li> Вся нижняя часть — прямоугольник</li>
+    </ul>
+
+</body>
+</html>
